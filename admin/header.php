@@ -1,5 +1,10 @@
 <?php
+session_start();
+if (isset($_SESSION['name'])) {
 
+} else {
+    header("Location:login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,22 +55,15 @@
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i
                         class="icon_menu"></i></div>
             </div>
-
-            <!--logo start-->
             <a href="index.php" class="logo">DAKORA <span class="lite">Admin Panel</span></a>
-            <!--logo end-->
-
             <div class="top-nav notification-row">
-                <!-- notificatoin dropdown start-->
-                <ul class="nav pull-right top-menu">
-
-                    <!-- user login dropdown start-->
-                    <li class="dropdown">
+                    <ul class="nav pull-right top-menu">
+            <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar-mini.jpg" class=" img-fluid">
+                                <img alt="" src="img/avatar-mini2.jpg" class=" img-fluid">
                             </span>
-                            <span class="username">NAME HERE</span>
+                            <span class="username"><?=$_SESSION['name']?></span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -74,33 +72,22 @@
                                 <a href="profile.php"><i class="icon_profile"></i> My Profile</a>
                             </li>
                             <li>
-                                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
+                                <a href="script/logout.php"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
                         </ul>
                     </li>
-                    <!-- user login dropdown end -->
                 </ul>
-                <!-- notificatoin dropdown end-->
             </div>
         </header>
-        <!--header end-->
-
-        <!--sidebar start-->
         <aside>
             <div id="sidebar" class="nav-collapse ">
-                <!-- sidebar menu start-->
                 <ul class="sidebar-menu">
-                    <li class="active">
+                    <li >
                         <a class="" href="index.php">
                             <i class="icon_house_alt"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
-
-
-
                 </ul>
-                <!-- sidebar menu end-->
             </div>
         </aside>
-        <!--sidebar end-->
