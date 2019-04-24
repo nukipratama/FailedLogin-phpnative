@@ -1,6 +1,3 @@
-Thanks for downloading this theme!
-
-Theme Name: DevFolio
-Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-Author: BootstrapMade.com
-Author URL: https://bootstrapmade.com
+    Project Name: Dakora Warehouse System
+    Project URL: https://alpro.glcnetworks.com/ti4002/group10
+    Author URL: https://github.com/nukipratama
