@@ -2,14 +2,14 @@
 date_default_timezone_set('Asia/Jakarta');
 function ip()
 {
-   
-    if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         //ip from share internet
         $ip = $_SERVER['HTTP_CLIENT_IP'];
-    }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
         //ip pass from proxy
         $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    }else{
+    } else {
         $ip = $_SERVER['REMOTE_ADDR'];
     }
     return $ip;
@@ -56,6 +56,7 @@ function checkTime($ip)
         $dbQuery->execute();
         $result = $dbQuery->get_result();
         $dbQuery->close();
+        $status = 0;
         if ($result->num_rows === 1) {
             $dbGet = $result->fetch_assoc();
             $book_time = date('d-m-Y H:i:s', strtotime($dbGet['time'] . '+ 15 minutes'));
@@ -63,8 +64,9 @@ function checkTime($ip)
             $book_time = strtotime($book_time);
             $current_time = strtotime($current_time);
             if ($book_time > $current_time) {
-session_destroy();
-               die(0);
+                session_destroy();
+                $status = 1;
+                die(0);
             } else {
                 $status = 0;
             }
