@@ -1,0 +1,67 @@
+[26-Apr-2019 01:24:19 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/nganggu1/warehouse.nganggur.id/admin/access.php:49
+Stack trace:
+#0 /home/nganggu1/warehouse.nganggur.id/admin/login.php(4): checkTime('103.28.53.243')
+#1 {main}
+  thrown in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 49
+[26-Apr-2019 01:26:06 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/nganggu1/warehouse.nganggur.id/admin/access.php:49
+Stack trace:
+#0 /home/nganggu1/warehouse.nganggur.id/admin/login.php(4): checkTime('103.28.53.243')
+#1 {main}
+  thrown in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 49
+[26-Apr-2019 01:26:59 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/nganggu1/warehouse.nganggur.id/admin/access.php:49
+Stack trace:
+#0 /home/nganggu1/warehouse.nganggur.id/admin/login.php(4): checkTime('103.28.53.243')
+#1 {main}
+  thrown in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 49
+[26-Apr-2019 01:27:44 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/nganggu1/warehouse.nganggur.id/admin/access.php:49
+Stack trace:
+#0 /home/nganggu1/warehouse.nganggur.id/admin/login.php(4): checkTime('103.28.53.243')
+#1 {main}
+  thrown in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 49
+[26-Apr-2019 01:27:52 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/nganggu1/warehouse.nganggur.id/admin/access.php:49
+Stack trace:
+#0 /home/nganggu1/warehouse.nganggur.id/admin/login.php(4): checkTime('103.28.53.243')
+#1 {main}
+  thrown in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 49
+[26-Apr-2019 01:30:39 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/nganggu1/warehouse.nganggur.id/admin/access.php:57
+Stack trace:
+#0 /home/nganggu1/warehouse.nganggur.id/admin/login.php(4): checkTime('36.85.81.242')
+#1 {main}
+  thrown in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 57
+[26-Apr-2019 01:30:47 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/nganggu1/warehouse.nganggur.id/admin/access.php:57
+Stack trace:
+#0 /home/nganggu1/warehouse.nganggur.id/admin/login.php(4): checkTime('182.0.207.57')
+#1 {main}
+  thrown in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 57
+[26-Apr-2019 01:46:11 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/nganggu1/warehouse.nganggur.id/admin/access.php:57
+Stack trace:
+#0 /home/nganggu1/warehouse.nganggur.id/admin/login.php(4): checkTime('36.85.81.242')
+#1 {main}
+  thrown in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 57
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_url already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 5
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_username already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 6
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_password already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 7
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_name already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 8
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_url already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 5
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_username already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 6
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_password already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 7
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_name already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 8
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_url already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 5
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_username already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 6
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_password already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 7
+[26-Apr-2019 01:46:36 Asia/Bangkok] PHP Notice:  Constant db_name already defined in /home/nganggu1/warehouse.nganggur.id/admin/script/db.php on line 8
+[26-Apr-2019 01:48:01 Asia/Bangkok] PHP Notice:  Undefined variable: status in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 71
+[25-Apr-2019 18:48:31 UTC] PHP Notice:  Undefined index: name in /home/nganggu1/warehouse.nganggur.id/admin/header.php on line 66
+[26-Apr-2019 01:48:55 Asia/Bangkok] PHP Notice:  Undefined variable: status in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 71
+[25-Apr-2019 18:50:01 UTC] PHP Notice:  Undefined index: name in /home/nganggu1/warehouse.nganggur.id/admin/header.php on line 66
+[26-Apr-2019 01:50:01 Asia/Bangkok] PHP Notice:  Undefined variable: status in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 71
+[25-Apr-2019 18:50:20 UTC] PHP Notice:  Undefined index: name in /home/nganggu1/warehouse.nganggur.id/admin/header.php on line 66
+[25-Apr-2019 18:51:41 UTC] PHP Notice:  Undefined index: name in /home/nganggu1/warehouse.nganggur.id/admin/header.php on line 66
+[25-Apr-2019 18:51:41 UTC] PHP Notice:  Undefined index: name in /home/nganggu1/warehouse.nganggur.id/admin/header.php on line 66
+[25-Apr-2019 18:51:46 UTC] PHP Notice:  Undefined index: name in /home/nganggu1/warehouse.nganggur.id/admin/header.php on line 66
+[25-Apr-2019 18:53:05 UTC] PHP Notice:  Undefined index: name in /home/nganggu1/warehouse.nganggur.id/admin/header.php on line 66
+[25-Apr-2019 18:54:40 UTC] PHP Notice:  Undefined index: name in /home/nganggu1/warehouse.nganggur.id/admin/header.php on line 66
+[26-Apr-2019 02:04:46 Asia/Bangkok] PHP Notice:  Undefined variable: status in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 72
+[26-Apr-2019 02:04:51 Asia/Bangkok] PHP Notice:  Undefined variable: status in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 72
+[26-Apr-2019 02:04:54 Asia/Bangkok] PHP Notice:  Undefined variable: status in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 72
+[26-Apr-2019 02:04:58 Asia/Bangkok] PHP Notice:  Undefined variable: status in /home/nganggu1/warehouse.nganggur.id/admin/access.php on line 72

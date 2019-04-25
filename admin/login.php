@@ -1,10 +1,16 @@
 <?php
 session_start();
+include 'access.php';
+checkTime(ip());
 if (isset($_SESSION['name'])) {
     header("Location:index.php");
 }
 if (isset($_SESSION['false'])) {
-    echo $_SESSION['false'];
+    if ($_SESSION['false'] >= 3) {
+        echo blacklist(ip());
+
+        // echo checkTime(ip());
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -40,9 +46,6 @@ if (isset($_SESSION['false'])) {
         <div class="container">
             <h1>Login - Warunk DAKORA</h1>
             <form class="login-form" method="post" action="script/auth.php">
-
-
-
                 <div class="login-wrap">
                     <p class="login-img"><i class="icon_lock_alt"></i></p>
                     <div class="input-group">
