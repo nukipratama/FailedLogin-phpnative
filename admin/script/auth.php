@@ -2,10 +2,15 @@
 session_start();
 $uname = $_POST['uname'];
 $pword = $_POST['pword'];
-if (check($uname, $pword) === 'true') {
+if (check($uname, $pword)) {
     header("Location:../index.php");
 } else {
-    header("Location:../");
+    if (isset($_SESSION['false'])) {
+        $_SESSION['false']++;
+    } else {
+        $_SESSION['false'] = 1;
+    }
+    header("Location:../login.php");
 }
 
 function check($uname, $pword)
@@ -18,14 +23,14 @@ function check($uname, $pword)
         $result = $dbQuery->get_result();
 
         $dbQuery->close();
-        $session = 'false';
+
         if ($result->num_rows === 1) {
             $dbGet = $result->fetch_assoc();
             $_SESSION['name'] = $dbGet['name'];
-            $session = 'true';
-            return $session;
+
+            return true;
         }
-        return $session;
+        return false;
     } catch (Exception $e) {
         return 'Database Error';
     }

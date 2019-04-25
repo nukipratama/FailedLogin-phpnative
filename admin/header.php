@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['name'])) {
-
+    unset($_SESSION['false']);
 } else {
     header("Location:login.php");
 }

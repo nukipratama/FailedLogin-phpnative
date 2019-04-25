@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION['name'])) {
+    header("Location:index.php");
+}
+if (isset($_SESSION['false'])) {
+    echo $_SESSION['false'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
