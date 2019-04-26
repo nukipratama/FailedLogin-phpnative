@@ -23,7 +23,7 @@ function blacklist($ip)
         $dbQuery->close();
         if ($result->num_rows === 1) {
             if (checkTime($ip) === 1) {
-                session_destroy();
+
                 die(0);
             } else {
                 $dbQuery1 = $dbConn->prepare("DELETE FROM `log` WHERE  `address` = ?;");
@@ -63,6 +63,7 @@ function checkTime($ip)
             if ($book_time > $current_time) {
                 $status = 1;
             } else {
+                session_destroy();
                 $status = 0;
             }
         }
