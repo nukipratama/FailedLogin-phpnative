@@ -27,7 +27,7 @@ function check($uname, $pword)
         if ($result->num_rows === 1) {
             $dbGet = $result->fetch_assoc();
             $_SESSION['name'] = $dbGet['name'];
-
+            $_SESSION['id'] = $dbGet['id'];
             return true;
         }
         return false;
