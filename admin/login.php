@@ -6,10 +6,10 @@ if (isset($_SESSION['name'])) {
     header("Location:index.php");
 }
 if (isset($_SESSION['false'])) {
-    if ($_SESSION['false'] >= 3) {
+    if ($_SESSION['false'] % 3 === 0) {
         echo blacklist(ip());
 
-        // echo checkTime(ip());
+         echo checkTime(ip());
     }
 }
 ?>

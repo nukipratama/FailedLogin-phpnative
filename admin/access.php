@@ -2,14 +2,24 @@
 date_default_timezone_set('Asia/Jakarta');
 function ip()
 {
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } else {
-        $ip = $_SERVER['REMOTE_ADDR'];
-    }
-    return $ip;
+    
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if(getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if(getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if(getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if(getenv('HTTP_FORWARDED'))
+        $ipaddress = getenv('HTTP_FORWARDED');
+    else if(getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
+        $ipaddress = 'UNKNOWN';
+ 
+    return $ipaddress;
 }
 function blacklist($ip)
 {
@@ -23,9 +33,10 @@ function blacklist($ip)
         $dbQuery->close();
         if ($result->num_rows === 1) {
             if (checkTime($ip) === 1) {
-
-                die(0);
+session_destroy();               
+                die();
             } else {
+
                 $dbQuery1 = $dbConn->prepare("DELETE FROM `log` WHERE  `address` = ?;");
                 $dbQuery1->bind_param("s", $ip);
                 $dbQuery1->execute();
@@ -62,9 +73,12 @@ function checkTime($ip)
             $current_time = strtotime($current_time);
             if ($book_time > $current_time) {
                 $status = 1;
+session_destroy();
+die();
+
             } else {
-                session_destroy();
-                $status = 0;
+              
+ $status = 0;
             }
         }
         return $status;
